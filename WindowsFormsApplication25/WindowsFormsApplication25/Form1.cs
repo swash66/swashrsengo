@@ -37,12 +37,12 @@ namespace WindowsFormsApplication25
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (textBox1.Text.Length ==0)
-            //{
+            if (textBox1.Text.Length ==0)
+            {
 
-            //}
-            //else
-            //{
+            }
+            else
+            {
                 Airlane airlane = new Airlane();
                 airlane.name = textBox1.Text;
                 Return.Airlane = airlane;
@@ -67,7 +67,7 @@ namespace WindowsFormsApplication25
                 textBox5.Visible = true;
 
                 label7.Text = "Общая вместимость: "+ airlane.Capacity.ToString();
-            //}
+            }
             
         }
 
@@ -75,10 +75,10 @@ namespace WindowsFormsApplication25
         {
             if (radioButton1.Checked && textBox2.Text.Length != 0 && textBox3.Text.Length != 0 && textBox4.Text.Length != 0 && textBox5.Text.Length != 0)
             {
-                //int res;
-                //bool isInt = Int32.TryParse(textBox5.Text, out res);
-                //if (isInt == true)
-                //{
+                int res;
+                bool isInt = Int32.TryParse(textBox5.Text, out res);
+                if (isInt == true)
+                {
                     Airlane airlane = Return.Airlane;
                     _20_65T samolet = new _20_65T();
                     samolet.Color = textBox4.Text;
@@ -97,7 +97,7 @@ namespace WindowsFormsApplication25
                     textBox3.Clear();
                     textBox4.Clear();
                     textBox5.Clear();
-                //}
+                }
 
             }
             if (radioButton2.Checked && textBox2.Text.Length != 0 && textBox3.Text.Length != 0 && textBox4.Text.Length != 0 && textBox5.Text.Length != 0)
